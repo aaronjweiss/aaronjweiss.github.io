@@ -64,7 +64,7 @@ Paddle.prototype.move = function (x, y) {
 };
 
 function Computer() {
-    this.paddle = new Paddle((width/2)-25, 10, 50, 10);
+    this.paddle = new Paddle(10, (height/2)-25, 10, 50);
 }
 
 Computer.prototype.render = function () {
@@ -88,7 +88,7 @@ Computer.prototype.update = function (ball) {
 };
 
 function Player() {
-    this.paddle = new Paddle((width/2)-25, height-20, 50, 10);
+    this.paddle = new Paddle(width-20, (height/2)-25, 10, 50);
 }
 
 Player.prototype.render = function () {
