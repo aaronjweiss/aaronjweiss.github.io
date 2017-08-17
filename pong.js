@@ -72,18 +72,18 @@ Computer.prototype.render = function () {
 };
 
 Computer.prototype.update = function (ball) {
-    var x_pos = ball.x;
-    var diff = -((this.paddle.x + (this.paddle.width / 2)) - x_pos);
+    var y_pos = ball.y;
+    var diff = -((this.paddle.y + (this.paddle.height / 2)) - y_pos);
     if (diff < 0 && diff < -4) {
         diff = -5;
     } else if (diff > 0 && diff > 4) {
         diff = 5;
     }
-    this.paddle.move(diff, 0);
-    if (this.paddle.x < 0) {
-        this.paddle.x = 0;
-    } else if (this.paddle.x + this.paddle.width > width) {
-        this.paddle.x = width - this.paddle.width;
+    this.paddle.move(0, diff);
+    if (this.paddle.y < 0) {
+        this.paddle.y = 0;
+    } else if (this.paddle.y + this.paddle.height > height) {
+        this.paddle.y = height - this.paddle.height;
     }
 };
 
@@ -96,18 +96,18 @@ Player.prototype.render = function () {
 };
 
 Player.prototype.update = function (ball) {
-    var x_pos = ball.x;
-    var diff = -((this.paddle.x + (this.paddle.width / 2)) - x_pos);
+    var y_pos = ball.y;
+    var diff = -((this.paddle.y + (this.paddle.height / 2)) - y_pos);
     if (diff < 0 && diff < -4) {
         diff = -5;
     } else if (diff > 0 && diff > 4) {
         diff = 5;
     }
-    this.paddle.move(diff, 0);
-    if (this.paddle.x < 0) {
-        this.paddle.x = 0;
-    } else if (this.paddle.x + this.paddle.width > width) {
-        this.paddle.x = width - this.paddle.width;
+    this.paddle.move(0, diff);
+    if (this.paddle.y < 0) {
+        this.paddle.y = 0;
+    } else if (this.paddle.y + this.paddle.height > height) {
+        this.paddle.y = height - this.paddle.height;
     }
 };
 
