@@ -39,6 +39,10 @@ var step = function () {
     update();
     render();
     animate(step);
+	width = pong.offsetWidth;
+	height = pong.offsetHeight;
+	canvas.width  = width;
+	canvas.height = height;
 };
 
 function Paddle(x, y, width, height) {
