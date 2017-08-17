@@ -165,15 +165,14 @@ Ball.prototype.update = function (paddle1, paddle2) {
 
     if (top_y > height/2) {
         if (top_y < (paddle1.y + paddle1.height) && bottom_y > paddle1.y && top_x < (paddle1.x + paddle1.width) && bottom_x > paddle1.x) {
-            //this.y_speed = -3;
+            this.y_speed = -3;
 			this.y_speed = -this.y_speed - Math.random();
             this.x_speed += (Math.random()*2);
             this.y += this.y_speed;
         }
     } else {
         if (top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y && top_x < (paddle2.x + paddle2.width) && bottom_x > paddle2.x) {
-            //this.y_speed = 3;
-			this.y_speed = -this.y_speed + Math.random();
+            this.y_speed = 3;
             this.x_speed += (Math.random()*2);
             this.y += this.y_speed;
         }
