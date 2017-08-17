@@ -4,14 +4,19 @@ var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame
 var canvas = document.createElement("canvas");
 var pong = document.getElementById("pong");
 //var height = document.getElementById("pong").offsetHeight;
-var width = 600;
-var height = 400;
-canvas.width = width;
-canvas.height = height;
+//var width = 600;
+//var height = 400;
+//canvas.width = width;
+//canvas.height = height;
+
+canvas.width  = pong.offsetWidth;
+canvas.height = pong.offsetHeight;
 var context = canvas.getContext('2d');
 var player = new Player();
 var computer = new Computer();
 var ball = new Ball(width/2, height/2);
+
+
 
 var keysDown = {};
 
