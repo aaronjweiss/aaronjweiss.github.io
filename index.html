@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aaron Weiss</title>
+
+	
+	
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	
+	<style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body ng-app="ngApp">
 
-	<!-- NAVIGATION -->
-	<nav class="navbar" role="navigation">
-		<div class="navbar-header">
-			<a class="navbar-brand" ui-sref="#">AngularUI Router</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="about">About</a></li>
-		</ul>
-	</nav>
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
 
-	<!-- UI-Router Container -->
-	<div class="container">		
-		<div ui-view></div>			
-	</div>
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+    </ul>
+</nav>
 
-	<!-- Footer -->
-	<footer class="text-left">
-			<div class="navbar navbar-fixed-bottom filled">
-				<hr>
-				<ul class="list-inline">
-					<li> <a href="mailto:aiceweiss@hotmail.com"><i class="fa fa-envelope"></i> email</a></li>
-					<li> <a href="https://github.com/aaronjweiss"><i class="fa fa-github"></i> github.com/aaronjweiss</a></li>
-				</ul>
-			</div>
-	</footer>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
 
-	<!-- FontAwesome CSS -->
-	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+</div>
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
+<!-- JS (load angular, ui-router, and our custom js file) -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
 
-	<!-- Angular JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-loader.min.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<!-- UI Router -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<!-- Bootstrap JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<!-- AngularScripts -->
-	<script src="app/app.js"></script>
 </body>
 </html>
