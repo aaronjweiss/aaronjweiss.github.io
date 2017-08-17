@@ -8,9 +8,10 @@ var pong = document.getElementById("pong");
 //var height = 400;
 //canvas.width = width;
 //canvas.height = height;
-
-canvas.width  = pong.offsetWidth;
-canvas.height = pong.offsetHeight;
+var width = pong.offsetWidth;
+var height = pong.offsetHeight;
+canvas.width  = width;
+canvas.height = height;
 var context = canvas.getContext('2d');
 var player = new Player();
 var computer = new Computer();
