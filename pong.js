@@ -3,11 +3,7 @@ var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame
     };
 var canvas = document.createElement("canvas");
 var pong = document.getElementById("pong");
-//var height = document.getElementById("pong").offsetHeight;
-//var width = 600;
-//var height = 400;
-//canvas.width = width;
-//canvas.height = height;
+
 var width = pong.offsetWidth;
 var height = pong.offsetHeight;
 canvas.width  = width;
@@ -17,13 +13,11 @@ var player = new Player();
 var computer = new Computer();
 var ball = new Ball(width/2, height/2);
 
-
-
 var keysDown = {};
 
 var render = function () {
-    context.fillStyle = "#F5F5F5";
-    context.fillRect(0, 0, width, height);
+    //context.fillStyle = "#F5F5F5";
+    //context.fillRect(0, 0, width, height);
     player.render();
     computer.render();
     ball.render();
