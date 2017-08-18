@@ -1,12 +1,7 @@
 .pong {
-	position: relative;
-	/*z-index: 1;*/
+	/*position: relative;
+	z-index: 1;*/
 	min-height: 250px;
-}
-
-.foreground {
-	position: relative;
-	/*z-index: 0;*/
 }
 
 .jumbotron {
