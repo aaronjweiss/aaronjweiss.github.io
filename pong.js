@@ -17,7 +17,7 @@ var keysDown = {};
 
 var render = function () {
     //context.fillStyle = "#F5F5F5";
-    //context.fillRect(0, 0, width, height);
+    context.clearRect(0, 0, width, height);
     player.render();
     computer.render();
     ball.render();
