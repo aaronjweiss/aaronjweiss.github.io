@@ -1,6 +1,6 @@
 .pong {
 	position: relative;
-	z-index: -5;
+	z-index: 1;
 }
 
 .foreground {
@@ -9,6 +9,5 @@
 }
 
 .jumbotron {
-	background-color: transparent;
-	background: transparent;
+	background-color: transparent !important;
 }
