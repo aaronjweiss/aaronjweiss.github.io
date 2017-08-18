@@ -5,7 +5,10 @@
 }
 
 .jumbotron {
-	position: absolute;
 	background-color: transparent !important;
+}
+
+.fg {
+	position: absolute;
 	z-index: 0;
 }
