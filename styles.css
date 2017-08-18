@@ -1,5 +1,7 @@
 .pong {
 	min-height: 250px;
+	position: relative;
+	z-index: -1;
 }
 
 .jumbotron {
@@ -7,5 +9,6 @@
 }
 
 .fg {
-
+	position: relative;
+	z-index: 0;
 }
