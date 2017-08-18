@@ -1,6 +1,6 @@
 .pong {
 	min-height: 250px;
-	position: absolute;
+	position: relative;
 	z-index: -1;
 }
 
@@ -9,6 +9,6 @@
 }
 
 .fg {
-	position: relative;
+	position: absolute;
 	z-index: 0;
 }
