@@ -114,8 +114,20 @@ Player.prototype.update = function (ball) {
 function Ball(x, y) {
     this.x = x;
     this.y = y;
-    this.x_speed = 3;
-    this.y_speed = 0;
+	this.x_speed = 3*randomDirection();
+    this.y_speed = (Math.random()*1.5)*randomDirection();
+}
+
+function randomDirection() {
+	var dir = Math.random() - 0.5; //create random number that can be positive or negative
+		
+		//normalize direction
+		if(dir < 0)
+			dir = -1;
+		else
+			dir = 1;
+	
+	return dir;
 }
 
 Ball.prototype.render = function () {
@@ -141,24 +153,26 @@ Ball.prototype.update = function (paddle1, paddle2) {
         this.y_speed = -this.y_speed;
     }
 
-    if (this.x < 0 || this.x > width) {
-        this.x_speed = 3;
-        this.y_speed = 0;
+    if (this.x < 0 || this.x > width) {	
+        this.x_speed = 3*randomDirection();
+        this.y_speed = (Math.random()*1.5)*randomDirection();
         this.x = width/2;
         this.y = height/2;
     }
 	
 	if (top_x > width/2) {
         if (top_x < (paddle1.x + paddle1.width) && bottom_x > paddle1.x && top_y < (paddle1.y + paddle1.height) && bottom_y > paddle1.y) {
-            this.x_speed = -3;			
-            this.y_speed += (Math.random()*2);
-            this.x += this.x_speed;
+            // hit the player's paddle
+			  this.x_speed = -3;
+			  this.y_speed += (paddle1.y_speed / 2);
+			  this.x += this.x_speed;
         }
     } else {
         if (top_x < (paddle2.x + paddle2.width) && bottom_x > paddle2.x && top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y) {
-            this.x_speed = 3;
-            this.y_speed += (Math.random()*2);
-            this.x += this.x_speed;
+            // hit the player's paddle
+			  this.x_speed = 3;
+			  this.y_speed += (paddle2.y_speed / 2);
+			  this.x += this.x_speed;
         }
     }
 };
