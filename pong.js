@@ -162,15 +162,16 @@ Ball.prototype.update = function (paddle1, paddle2) {
 	
 	if (top_x > width/2) {
         if (top_x < (paddle1.x + paddle1.width) && bottom_x > paddle1.x && top_y < (paddle1.y + paddle1.height) && bottom_y > paddle1.y) {
-            // hit the player's paddle
-			  this.x_speed = -3;
+            // hit the player's paddle -3
+			  //this.x_speed = -3;
+			  this.x_speed = -this.x_speed * 1.05;
 			  this.y_speed += (paddle1.y_speed / 2);
 			  this.x += this.x_speed;
         }
     } else {
         if (top_x < (paddle2.x + paddle2.width) && bottom_x > paddle2.x && top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y) {
-            // hit the player's paddle
-			  this.x_speed = 3;
+            // hit the computer's paddle 3
+			  this.x_speed = -this.x_speed * 1.05;
 			  this.y_speed += (paddle2.y_speed / 2);
 			  this.x += this.x_speed;
         }
