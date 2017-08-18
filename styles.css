@@ -1,6 +1,6 @@
 .pong {
 	min-height: 250px;
-	position: relative;
+	position: absolute;
 	z-index: -1;
 }
 
